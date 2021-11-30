@@ -1,0 +1,46 @@
+ CREATE TABLE `books` (
+  `B_id` int NOT NULL AUTO_INCREMENT,
+  `Author` char(200) NOT NULL,
+  `Publisher` char(200) NOT NULL,
+  `Category` char(200) DEFAULT NULL,
+  `Units` int NOT NULL,
+  `Bname` char(200) NOT NULL,
+  KEY `B_id` (`B_id`)
+) 
+
+
+CREATE TABLE `current` (
+  `B_id` int NOT NULL,
+  `C_id` int NOT NULL,
+  `tDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) 
+
+
+
+CREATE TABLE `customers` (
+  `C_id` int NOT NULL AUTO_INCREMENT,
+  `Cname` char(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `phone` char(14) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `address` char(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `dob` char(15) NOT NULL,
+  `DOJ` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  KEY `C_id` (`C_id`)
+)
+
+
+ CREATE TABLE `history` (
+  `B_id` int NOT NULL,
+  `C_id` int NOT NULL,
+  `action` char(15) NOT NULL,
+  `tdate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) 
+
+
+
+
+CREATE TABLE `ratings` 
+(
+  `B_id` int NOT NULL,
+  `C_id` int NOT NULL,
+  `rate` float NOT NULL
+)
