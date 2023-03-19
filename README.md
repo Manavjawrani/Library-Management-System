@@ -1,1 +1,3 @@
 # Sem-3-Project
+
+This project showcases a Library Management System, which is a tool designed to help libraries offer better services. The system is built using Java Swings and MySQL technologies to make it strong and efficient. Librarians can use the system to manage various tasks, like lending and returning books in an easy and effective way. The system also helps librarians keep track of book inventory and manage user accounts. Additionally, the system offers a user-friendly interface that allows patrons to search for books and check their account information. This project highlights how technology can improve library services and make them more efficient and enjoyable for everyone.
